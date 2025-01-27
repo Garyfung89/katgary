@@ -20,8 +20,7 @@ img {vertical-align: middle;}
 .prev, .next {
   cursor: pointer;
   position: absolute;
-  top: 10%;
-  
+  top: 30%;
   height: 50%;
   width: auto;
   padding: 16px;
@@ -35,24 +34,6 @@ img {vertical-align: middle;}
   color: #8f2f2;
 }
 
-
-.prev:mouseover, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 0%;
-  height: 100%;
-  width: auto;
-  padding: 16px;
-  margin-top: -12px;
-  color: black;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-  color: #000000;
-  text-align: middle;
-}
 
 
 /* Position the "next button" to the right */
@@ -165,7 +146,7 @@ img {vertical-align: middle;}
 	let startY = 0;
 	let startTime = 0;
 	const swipeThreshold = 20; // Minimum distance in px for a swipe
-	const maxDuration = 15000; // Maximum time in ms for a valid swipe
+	const maxDuration = 100; // Maximum time in ms for a valid swipe
 
 	loadContent();
 	showSlides(slideIndex);
