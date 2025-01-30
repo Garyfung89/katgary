@@ -20,14 +20,14 @@ img {vertical-align: middle;}
 .prev, .next {
   cursor: pointer;
   position: absolute;
-  top: 30%;
-  height: 50%;
+  top: 15%;
+  height: 20%;
   width: auto;
   padding: 16px;
   margin-top: -12px;
-  color: black;
+  color: grey;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 20px;
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
@@ -53,7 +53,7 @@ img {vertical-align: middle;}
   font-size: 22px;
   padding: 8px 12px;
   position: absolute;
-  bottom: 8px;
+  bottom: 16px;
   width: 100%;
   background-color:grey;
   text-align: justify;
@@ -164,7 +164,7 @@ img {vertical-align: middle;}
 			content += '	<div class="text"><strong>'+captionTexts[i]+'</strong></div>';
 			content += '</div>';
 			
-			pagination += '<span class="dot" onclick="currentSlide('+i+')">'+'</span>';
+			//pagination += '<span class="dot" onclick="currentSlide('+i+')">'+'</span>';
 		}
 		
 		content += '<a class="prev" onclick="plusSlides(-1)">&lt;</a>';
