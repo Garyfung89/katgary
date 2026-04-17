@@ -1,46 +1,288 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
- <title>Kat Gary</title>
- <style>
- .map-container {
- position: relative;
- width: 100%;
- height: 0;
- padding-bottom: 35%;
- }
- .map-container iframe {
- position: absolute;
- top: 0;
- left: 100;
- width: 30%;
- height: 30%;
- border: 0;
- }
- </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KatGary – Welcome</title>
+  <meta name="description" content="Welcome to KatGary, our home at 9 Railway Street, Chatswood NSW. We're so glad to have you." />
+
+  <!-- Open Graph (link preview in iMessage, WhatsApp, etc.) -->
+  <meta property="og:title" content="KatGary – Welcome" />
+  <meta property="og:description" content="It's our honour to have you. Find us at 9 Railway Street, Chatswood NSW 2067." />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Lato:wght@300;400&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      min-height: 100vh;
+      background-color: #F5F0E8;
+      background-image:
+        radial-gradient(ellipse at 20% 10%, rgba(196, 168, 130, 0.18) 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 90%, rgba(160, 133, 106, 0.12) 0%, transparent 55%);
+      font-family: 'Lato', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem 1.5rem;
+      text-align: center;
+    }
+
+    .leaf {
+      font-size: 36px;
+      margin-bottom: 1.75rem;
+      animation: floatLeaf 4s ease-in-out infinite;
+    }
+
+    @keyframes floatLeaf {
+      0%, 100% { transform: translateY(0) rotate(-3deg); }
+      50%       { transform: translateY(-6px) rotate(3deg); }
+    }
+
+    .eyebrow {
+      font-weight: 300;
+      font-size: 11px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: #A0856A;
+      margin-bottom: 0.6rem;
+      animation: fadeUp 0.8s ease both;
+      animation-delay: 0.1s;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.4rem, 7vw, 3.6rem);
+      font-weight: 400;
+      color: #3D2B1F;
+      line-height: 1.15;
+      margin-bottom: 0.5rem;
+      animation: fadeUp 0.8s ease both;
+      animation-delay: 0.2s;
+    }
+
+    .subtitle {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: clamp(1rem, 3vw, 1.3rem);
+      color: #8A6A52;
+      font-weight: 400;
+      margin-bottom: 2.25rem;
+      animation: fadeUp 0.8s ease both;
+      animation-delay: 0.35s;
+    }
+
+    .ornament {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      justify-content: center;
+      margin-bottom: 2.25rem;
+      animation: fadeUp 0.8s ease both;
+      animation-delay: 0.45s;
+    }
+
+    .ornament-line {
+      width: 36px;
+      height: 1px;
+      background: #C4A882;
+    }
+
+    .ornament-dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: #C4A882;
+    }
+
+    .address {
+      font-size: 14px;
+      font-weight: 300;
+      color: #7A5C44;
+      letter-spacing: 0.05em;
+      line-height: 1.9;
+      margin-bottom: 2.5rem;
+      animation: fadeUp 0.8s ease both;
+      animation-delay: 0.55s;
+    }
+
+    .address a {
+      color: #7A5C44;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(160, 133, 106, 0.4);
+      transition: border-color 0.2s;
+    }
+
+    .address a:hover {
+      border-color: #A0856A;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #3D2B1F;
+      color: #F5F0E8;
+      font-family: 'Lato', sans-serif;
+      font-weight: 400;
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 15px 36px;
+      border-radius: 40px;
+      transition: background 0.25s ease, transform 0.15s ease, box-shadow 0.25s ease;
+      animation: fadeUp 0.8s ease both;
+      animation-delay: 0.65s;
+    }
+
+    .btn:hover {
+      background: #5C3D28;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(61, 43, 31, 0.18);
+    }
+
+    .btn:active {
+      transform: translateY(0);
+    }
+
+    .btn-arrow {
+      font-size: 16px;
+      line-height: 1;
+      transition: transform 0.2s ease;
+    }
+
+    .btn:hover .btn-arrow {
+      transform: translateX(3px);
+    }
+
+    /* Map thumbnail */
+    .map-wrap {
+      margin-top: 2.25rem;
+      animation: fadeUp 0.8s ease both;
+      animation-delay: 0.75s;
+    }
+
+    .map-label {
+      font-size: 11px;
+      font-weight: 300;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #A0856A;
+      margin-bottom: 0.65rem;
+    }
+
+    .map-thumb {
+      display: block;
+      width: 240px;
+      height: 150px;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1.5px solid rgba(196, 168, 130, 0.55);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      text-decoration: none;
+    }
+
+    .map-thumb:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(61, 43, 31, 0.14);
+    }
+
+    .map-thumb iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      pointer-events: none;
+      display: block;
+    }
+
+    .map-hint {
+      margin-top: 0.5rem;
+      font-size: 11px;
+      font-weight: 300;
+      color: #B09A86;
+      letter-spacing: 0.04em;
+    }
+
+    footer {
+      margin-top: 3rem;
+      font-size: 11px;
+      font-weight: 300;
+      letter-spacing: 0.1em;
+      color: #B09A86;
+      animation: fadeUp 0.8s ease both;
+      animation-delay: 0.85s;
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(16px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
 </head>
 <body>
- <h2>Welcome to KatGary</h2>
- 
- <p>Address: 9 Railway Street, Chatswood, NSW, Australia 2067</p>
- 
-	<a href="car_instruction.html">By Car</a>
- <p>Map</p>
- <div class="map-container">
-	 <iframe
 
-	src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3310.727879263569!2d151.1805!3d-33.7969!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12aefb6e6f6f6f%3A0x123456789abcdef!2s9%20Railway%20St%2C%20Chatswood%20NSW%202067%2C%20Australia!5e0!3m2!1sen!2sau!4v1620000000000&center=-5&zoom=8"
-	style="border:0;"
-	allowfullscreen=""
-	loading="lazy"
-	referrerpolicy="no-referrer-when-downgrade">
+  <div class="leaf">🌿</div>
 
+  <p class="eyebrow">Welcome to our home</p>
+  <h1>KatGary</h1>
+  <p class="subtitle">It's our honour to have you</p>
 
-	</iframe>
-	</div>
+  <div class="ornament">
+    <div class="ornament-line"></div>
+    <div class="ornament-dot"></div>
+    <div class="ornament-line"></div>
+  </div>
 
-<p>&copy; KatGary 2024-2025</p>
- </div>
+  <p class="address">
+    <a href="https://maps.google.com/?q=9+Railway+Street+Chatswood+NSW+2067" target="_blank" rel="noopener">
+      9 Railway Street<br>Chatswood NSW 2067
+    </a>
+  </p>
+
+  <a class="btn" href="car_instruction.html">
+    How to reach us
+    <span class="btn-arrow">→</span>
+  </a>
+
+  <!-- Map thumbnail — tapping opens Google Maps -->
+  <div class="map-wrap">
+    <p class="map-label">Find us here</p>
+    <a class="map-thumb"
+       href="https://maps.google.com/?q=9+Railway+Street+Chatswood+NSW+2067"
+       target="_blank"
+       rel="noopener"
+       aria-label="Open in Google Maps">
+      <iframe
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps?q=9+Railway+Street,+Chatswood+NSW+2067&output=embed&z=16"
+        title="KatGary on Google Maps">
+      </iframe>
+    </a>
+    <p class="map-hint">Tap to open in Google Maps</p>
+  </div>
+
+  <footer>© KatGary 2025</footer>
+
 </body>
 </html>
