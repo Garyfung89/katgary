@@ -30,7 +30,6 @@
     padding-bottom: 40px;
   }
 
-  /* Header */
   .header {
     background: var(--accent);
     color: white;
@@ -55,11 +54,7 @@
     background: rgba(255,255,255,0.04);
     border-radius: 50%;
   }
-  .header-emoji {
-    font-size: 36px;
-    display: block;
-    margin-bottom: 8px;
-  }
+  .header-emoji { font-size: 36px; display: block; margin-bottom: 8px; }
   .header h1 {
     font-family: 'DM Serif Display', serif;
     font-size: 26px;
@@ -67,13 +62,8 @@
     letter-spacing: -0.3px;
     margin-bottom: 6px;
   }
-  .header p {
-    font-size: 14px;
-    opacity: 0.8;
-    font-weight: 400;
-  }
+  .header p { font-size: 14px; opacity: 0.8; }
 
-  /* Progress bar */
   .progress-bar-wrap {
     background: rgba(0,0,0,0.15);
     height: 3px;
@@ -88,7 +78,6 @@
     transition: width 0.4s ease;
   }
 
-  /* Step counter strip */
   .step-strip {
     background: var(--surface);
     border-bottom: 1px solid var(--border);
@@ -101,58 +90,29 @@
     z-index: 10;
     box-shadow: 0 2px 8px rgba(0,0,0,0.06);
   }
-  .step-counter {
-    font-size: 13px;
-    font-weight: 600;
-    color: var(--accent);
-    letter-spacing: 0.3px;
-  }
-  .dot-row {
-    display: flex;
-    gap: 5px;
-    align-items: center;
-  }
+  .step-counter { font-size: 13px; font-weight: 600; color: var(--accent); letter-spacing: 0.3px; }
+  .dot-row { display: flex; gap: 5px; align-items: center; }
   .dot {
-    width: 6px;
-    height: 6px;
+    width: 6px; height: 6px;
     border-radius: 50%;
     background: var(--border);
     transition: all 0.3s ease;
     cursor: pointer;
     flex-shrink: 0;
   }
-  .dot.active {
-    background: var(--accent);
-    width: 18px;
-    border-radius: 3px;
-  }
-  .dot.visited {
-    background: var(--accent-mid);
-  }
+  .dot.active { background: var(--accent); width: 18px; border-radius: 3px; }
+  .dot.visited { background: var(--accent-mid); }
 
-  /* Main slideshow */
-  .slideshow-wrap {
-    padding: 16px 16px 0;
-  }
+  .slideshow-wrap { padding: 16px 16px 0; }
 
-  .slide {
-    display: none;
-    animation: fadeIn 0.35s ease;
-  }
-  .slide.active {
-    display: block;
-  }
+  .slide { display: none; animation: fadeIn 0.35s ease; }
+  .slide.active { display: block; }
   @keyframes fadeIn {
     from { opacity: 0; transform: translateY(6px); }
     to   { opacity: 1; transform: translateY(0); }
   }
 
-  .slide-card {
-    background: var(--surface);
-    border-radius: var(--radius);
-    overflow: hidden;
-    box-shadow: var(--shadow);
-  }
+  .slide-card { background: var(--surface); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
 
   .slide-image-wrap {
     position: relative;
@@ -161,16 +121,10 @@
     aspect-ratio: 4/3;
     overflow: hidden;
   }
-  .slide-image-wrap img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
+  .slide-image-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; }
   .slide-badge {
     position: absolute;
-    top: 12px;
-    left: 12px;
+    top: 12px; left: 12px;
     background: var(--accent);
     color: white;
     font-size: 11px;
@@ -181,28 +135,10 @@
     text-transform: uppercase;
   }
 
-  .slide-body {
-    padding: 18px 18px 20px;
-  }
-  .slide-caption {
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 1.5;
-    color: var(--text);
-  }
-  .slide-caption:empty::before {
-    content: 'Tap the arrow to continue →';
-    color: var(--text-muted);
-    font-style: italic;
-    font-weight: 400;
-  }
+  .slide-body { padding: 18px 18px 20px; }
+  .slide-caption { font-size: 16px; font-weight: 500; line-height: 1.5; color: var(--text); }
 
-  /* Navigation buttons */
-  .nav-row {
-    display: flex;
-    gap: 10px;
-    padding: 14px 16px 0;
-  }
+  .nav-row { display: flex; gap: 10px; padding: 14px 16px 0; }
   .nav-btn {
     flex: 1;
     padding: 14px;
@@ -219,27 +155,13 @@
     gap: 6px;
   }
   .nav-btn:active { transform: scale(0.97); }
-  .btn-prev {
-    background: var(--surface);
-    color: var(--text-muted);
-    border: 1.5px solid var(--border);
-  }
+  .btn-prev { background: var(--surface); color: var(--text-muted); border: 1.5px solid var(--border); }
   .btn-prev:hover { border-color: var(--accent); color: var(--accent); }
-  .btn-next {
-    background: var(--accent);
-    color: white;
-    flex: 2;
-  }
+  .btn-next { background: var(--accent); color: white; flex: 2; }
   .btn-next:hover { background: #235e42; }
-  .btn-next.done {
-    background: #e07a28;
-  }
-  .btn-prev:disabled {
-    opacity: 0.3;
-    cursor: default;
-  }
+  .btn-next.done { background: #e07a28; }
+  .btn-prev:disabled { opacity: 0.3; cursor: default; }
 
-  /* Completion card */
   .done-card {
     display: none;
     margin: 16px;
@@ -251,24 +173,11 @@
   }
   .done-card.show { display: block; animation: fadeIn 0.4s ease; }
   .done-card .done-emoji { font-size: 48px; display: block; margin-bottom: 12px; }
-  .done-card h2 {
-    font-family: 'DM Serif Display', serif;
-    font-size: 22px;
-    color: var(--accent);
-    margin-bottom: 8px;
-  }
+  .done-card h2 { font-family: 'DM Serif Display', serif; font-size: 22px; color: var(--accent); margin-bottom: 8px; }
   .done-card p { font-size: 14px; color: var(--text-muted); }
 
-  /* Swipe hint */
-  .swipe-hint {
-    text-align: center;
-    font-size: 12px;
-    color: var(--text-muted);
-    padding: 12px 0 0;
-    opacity: 0.7;
-  }
+  .swipe-hint { text-align: center; font-size: 12px; color: var(--text-muted); padding: 12px 0 0; opacity: 0.7; }
 
-  /* Restart button */
   .restart-btn {
     display: block;
     margin: 12px auto 0;
@@ -283,131 +192,149 @@
     cursor: pointer;
   }
   .restart-btn:hover { background: var(--accent); color: white; }
+
+  /* Loading state */
+  .loading {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--text-muted);
+    font-size: 15px;
+  }
 </style>
 </head>
 <body>
 
-<div class="header">
-  <span class="header-emoji">🏠</span>
-  <h1>Getting to Our Place</h1>
-  <p>Follow these steps to reach our visitor apartment</p>
-  <div class="progress-bar-wrap">
-    <div class="progress-bar-fill" id="progressBar" style="width: 7%"></div>
-  </div>
+<!-- Header — populated from config -->
+<div class="header" id="header">
+  <div class="loading">Loading…</div>
 </div>
 
-<div class="step-strip">
-  <span class="step-counter" id="stepCounter">Step 1 of 14</span>
+<div class="step-strip" id="stepStrip" style="display:none">
+  <span class="step-counter" id="stepCounter"></span>
   <div class="dot-row" id="dotRow"></div>
 </div>
 
-<div class="slideshow-wrap" id="slideshowWrap">
-  <!-- Slides injected by JS -->
+<div class="slideshow-wrap" id="slideshowWrap"></div>
+
+<div class="nav-row" id="navRow" style="display:none">
+  <button class="nav-btn btn-prev" id="btnPrev" disabled>← Back</button>
+  <button class="nav-btn btn-next" id="btnNext">Next →</button>
 </div>
 
-<div class="nav-row">
-  <button class="nav-btn btn-prev" id="btnPrev" onclick="changeSlide(-1)" disabled>← Back</button>
-  <button class="nav-btn btn-next" id="btnNext" onclick="changeSlide(1)">Next →</button>
-</div>
+<p class="swipe-hint" id="swipeHint" style="display:none">← Swipe left or right to navigate →</p>
 
-<p class="swipe-hint" id="swipeHint">← Swipe left or right to navigate →</p>
-
-<div class="done-card" id="doneCard">
-  <span class="done-emoji">🎉</span>
-  <h2>You've made it!</h2>
-  <p>Follow the lift to your floor and we'll see you soon.</p>
-  <button class="restart-btn" onclick="goToSlide(1)">Start over</button>
-</div>
+<div class="done-card" id="doneCard"></div>
 
 <script>
-  const total = 14;
-  const captions = {
-    1:  "Exit the roundabout onto the footpath between 9 and 11 Railway Street.",
-    2:  "Look out for grey signage stating Altura & Epica Carpark.",
-    3:  "Take the left lane for all visitors and stop at the gate.",
-    4:  "Enter the unit number followed by the green bell button — the intercom will connect you to our unit.",
-    5:  "Exit the roundabout on the right, like the black car.",
-    6:  "Drive down the slope.",
-    7:  "Follow the arrow.",
-    8:  "Follow the arrow.",
-    9:  "Follow the arrow.",
-    10: "Follow the arrow.",
-    11: "Follow the arrow down a level.",
-    12: "Note the glass door is on level B2.",
-    13: "Enter the glass door and turn left.",
-    14: "Use the intercom to connect to our unit. Enter the second glass door and take the first lift arriving. Press the unit level in the lift panel."
-  };
+  // ─── Config path — change this to point to any JSON file ───────────────────
+  const CONFIG_URL = 'car_instruction.json';
+  // ───────────────────────────────────────────────────────────────────────────
 
   let current = 1;
+  let total = 0;
+  let config = null;
 
-  // Build slides
-  const wrap = document.getElementById('slideshowWrap');
-  for (let i = 1; i <= total; i++) {
-    const div = document.createElement('div');
-    div.className = 'slide' + (i === 1 ? ' active' : '');
-    div.id = 'slide-' + i;
-    div.innerHTML = `
-      <div class="slide-card">
-        <div class="slide-image-wrap">
-          <img src="images/${i}.jpg" alt="Step ${i}" loading="${i <= 2 ? 'eager' : 'lazy'}">
-          <span class="slide-badge">Step ${i}</span>
-        </div>
-        <div class="slide-body">
-          <p class="slide-caption">${captions[i] || ''}</p>
-        </div>
-      </div>`;
-    wrap.appendChild(div);
+  async function init() {
+    try {
+      const res = await fetch(CONFIG_URL);
+      if (!res.ok) throw new Error('Could not load ' + CONFIG_URL);
+      config = await res.json();
+      buildPage(config);
+    } catch (err) {
+      document.getElementById('header').innerHTML =
+        `<p style="color:white;padding:20px">⚠️ Failed to load config.json: ${err.message}</p>`;
+    }
   }
 
-  // Build dots
-  const dotRow = document.getElementById('dotRow');
-  for (let i = 1; i <= total; i++) {
-    const dot = document.createElement('span');
-    dot.className = 'dot' + (i === 1 ? ' active' : '');
-    dot.id = 'dot-' + i;
-    dot.onclick = () => goToSlide(i);
-    dotRow.appendChild(dot);
+  function buildPage(cfg) {
+    total = cfg.steps.length;
+
+    // Header
+    document.title = cfg.title;
+    document.getElementById('header').innerHTML = `
+      <span class="header-emoji">${cfg.emoji || '📋'}</span>
+      <h1>${cfg.title}</h1>
+      <p>${cfg.subtitle || ''}</p>
+      <div class="progress-bar-wrap">
+        <div class="progress-bar-fill" id="progressBar" style="width:${100/total}%"></div>
+      </div>`;
+
+    // Slides
+    const wrap = document.getElementById('slideshowWrap');
+    cfg.steps.forEach((step, i) => {
+      const n = i + 1;
+      const div = document.createElement('div');
+      div.className = 'slide' + (n === 1 ? ' active' : '');
+      div.id = 'slide-' + n;
+      div.innerHTML = `
+        <div class="slide-card">
+          <div class="slide-image-wrap">
+            <img src="${step.image}" alt="Step ${n}" loading="${n <= 2 ? 'eager' : 'lazy'}">
+            <span class="slide-badge">Step ${n}</span>
+          </div>
+          <div class="slide-body">
+            <p class="slide-caption">${step.caption || ''}</p>
+          </div>
+        </div>`;
+      wrap.appendChild(div);
+    });
+
+    // Dots
+    const dotRow = document.getElementById('dotRow');
+    cfg.steps.forEach((_, i) => {
+      const dot = document.createElement('span');
+      const n = i + 1;
+      dot.className = 'dot' + (n === 1 ? ' active' : '');
+      dot.id = 'dot-' + n;
+      dot.onclick = () => goToSlide(n);
+      dotRow.appendChild(dot);
+    });
+
+    // Done card
+    const done = cfg.completionMessage || {};
+    document.getElementById('doneCard').innerHTML = `
+      <span class="done-emoji">${done.emoji || '✅'}</span>
+      <h2>${done.heading || 'All done!'}</h2>
+      <p>${done.body || ''}</p>
+      <button class="restart-btn" onclick="goToSlide(1)">Start over</button>`;
+
+    // Wire up nav buttons
+    document.getElementById('btnPrev').onclick = () => changeSlide(-1);
+    document.getElementById('btnNext').onclick = () => changeSlide(1);
+
+    // Show hidden elements
+    document.getElementById('stepStrip').style.display = '';
+    document.getElementById('navRow').style.display = '';
+    document.getElementById('swipeHint').style.display = '';
+
+    updateUI();
   }
 
   function updateUI() {
-    // Slides
     document.querySelectorAll('.slide').forEach(s => s.classList.remove('active'));
     document.getElementById('slide-' + current).classList.add('active');
 
-    // Dots
     document.querySelectorAll('.dot').forEach((d, i) => {
       d.classList.remove('active', 'visited');
       if (i + 1 === current) d.classList.add('active');
       else if (i + 1 < current) d.classList.add('visited');
     });
 
-    // Counter
     document.getElementById('stepCounter').textContent = `Step ${current} of ${total}`;
-
-    // Progress bar
     document.getElementById('progressBar').style.width = (current / total * 100) + '%';
-
-    // Buttons
     document.getElementById('btnPrev').disabled = current === 1;
+
     const btnNext = document.getElementById('btnNext');
     if (current === total) {
       btnNext.textContent = '✓ Done!';
       btnNext.classList.add('done');
+      document.getElementById('doneCard').classList.add('show');
+      document.getElementById('swipeHint').style.display = 'none';
     } else {
       btnNext.textContent = 'Next →';
       btnNext.classList.remove('done');
-    }
-
-    // Done card
-    const doneCard = document.getElementById('doneCard');
-    const swipeHint = document.getElementById('swipeHint');
-    const navRow = document.querySelector('.nav-row');
-    if (current === total) {
-      doneCard.classList.add('show');
-      swipeHint.style.display = 'none';
-    } else {
-      doneCard.classList.remove('show');
-      swipeHint.style.display = 'block';
+      document.getElementById('doneCard').classList.remove('show');
+      document.getElementById('swipeHint').style.display = 'block';
     }
   }
 
@@ -425,13 +352,11 @@
 
   // Swipe support
   let touchStartX = 0, touchStartY = 0, touchStartTime = 0;
-
   document.addEventListener('touchstart', e => {
     touchStartX = e.touches[0].clientX;
     touchStartY = e.touches[0].clientY;
     touchStartTime = Date.now();
   }, { passive: true });
-
   document.addEventListener('touchend', e => {
     const dx = e.changedTouches[0].clientX - touchStartX;
     const dy = e.changedTouches[0].clientY - touchStartY;
@@ -441,7 +366,7 @@
     }
   }, { passive: true });
 
-  updateUI();
+  init();
 </script>
 </body>
 </html>

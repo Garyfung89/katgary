@@ -1,20 +1,68 @@
 {
-	"instruction":
-	[
-		"",
-		"Exit the roundabout onto footpath between 9 and 11 Railway Street",
-		"Look out for grey signage stating Altura & Epica Carpark",
-		"Take the left lane for all visitors and stop at the gate",
-		"Enter unit number followed by the green bell button. The intercom will connect you and our unit.",
-		"Exit the roundabout on the right, like the black car",
-		"Drive down the slope",
-		"Follow the arrow",
-		"Follow the arrow",
-		"Follow the arrow",
-		"Follow the arrow",
-		"Follow the arrow down a level",
-		"Note the glass door is on level B2",
-		"Enter the glass door and turn left",
-		"Use the intercom to connect to our unit. Enter the second glass door and take the first lift arriving. Press the unit level in the lift panel.",
-	]
+  "title": "Getting to Our Place",
+  "subtitle": "Follow these steps to reach our visitor apartment",
+  "emoji": "🏠",
+  "completionMessage": {
+    "emoji": "🎉",
+    "heading": "You've made it!",
+    "body": "Follow the lift to your floor and we'll see you soon."
+  },
+  "steps": [
+    {
+      "image": "images/1.jpg",
+      "caption": "Exit the roundabout onto the footpath between 9 and 11 Railway Street."
+    },
+    {
+      "image": "images/2.jpg",
+      "caption": "Look out for grey signage stating Altura & Epica Carpark."
+    },
+    {
+      "image": "images/3.jpg",
+      "caption": "Take the left lane for all visitors and stop at the gate."
+    },
+    {
+      "image": "images/4.jpg",
+      "caption": "Enter the unit number followed by the green bell button — the intercom will connect you to our unit."
+    },
+    {
+      "image": "images/5.jpg",
+      "caption": "Exit the roundabout on the right, like the black car."
+    },
+    {
+      "image": "images/6.jpg",
+      "caption": "Drive down the slope."
+    },
+    {
+      "image": "images/7.jpg",
+      "caption": "Follow the arrow."
+    },
+    {
+      "image": "images/8.jpg",
+      "caption": "Follow the arrow."
+    },
+    {
+      "image": "images/9.jpg",
+      "caption": "Follow the arrow."
+    },
+    {
+      "image": "images/10.jpg",
+      "caption": "Follow the arrow."
+    },
+    {
+      "image": "images/11.jpg",
+      "caption": "Follow the arrow down a level."
+    },
+    {
+      "image": "images/12.jpg",
+      "caption": "Note the glass door is on level B2."
+    },
+    {
+      "image": "images/13.jpg",
+      "caption": "Enter the glass door and turn left."
+    },
+    {
+      "image": "images/14.jpg",
+      "caption": "Use the intercom to connect to our unit. Enter the second glass door and take the first lift arriving. Press the unit level in the lift panel."
+    }
+  ]
 }
